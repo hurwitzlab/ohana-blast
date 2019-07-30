@@ -1,0 +1,66 @@
+{
+    "available": true,
+    "checkpointable": false,
+    "defaultMemoryPerNode": 192,
+    "defaultProcessorsPerNode": 1,
+    "defaultMaxRunTime": "12:00:00",
+    "defaultNodeCount": 1,
+    "defaultQueue": "skx-normal",
+    "deploymentPath": "jklynch/applications/ohana-blast-0.0.9/stampede2",
+    "deploymentSystem": "data.iplantcollaborative.org",
+    "executionSystem": "tacc-stampede2-jklynch",
+    "executionType": "HPC",
+    "helpURI": "https://www.protocols.io/view/muscope-blast-app-0-0-9u2-updated-2018-05-11-jcccisw",
+    "label": "Ohana BLAST",
+    "longDescription": "BLAST for Ohana Gene Catalog",
+    "modules": [],
+    "name": "ohana-blast",
+    "ontology": ["http://sswapmeet.sswap.info/agave/apps/Application"],
+    "parallelism": "SERIAL",
+    "shortDescription": "Ohana BLAST",
+    "tags": ["Ohana","blast"],
+    "templatePath": "template.sh",
+    "testPath": "test.sh",
+    "version": "0.0.9",
+    "inputs": [{
+        "id": "QUERY",
+        "value": {
+            "default": "",
+            "order": 0,
+            "required": true,
+            "validator": "",
+            "visible": true
+        },
+        "semantics": {
+            "ontology": ["http://sswapmeet.sswap.info/mime/application/X-bam"],
+            "minCardinality": 1,
+            "fileTypes": ["raw-0"]
+        },
+        "details": {
+            "description": "",
+            "label": "Input file(s)",
+            "argument": "",
+            "showArgument": true
+        }
+    }],
+    "parameters": [
+       {
+        "id": "PCT_ID",
+        "value": {
+            "type": "string",
+            "default": ".98",
+            "order": 1,
+            "required": false,
+            "validator": "",
+            "visible": true
+        },
+        "details": {
+            "description": "Percent Identity",
+            "label": "Percent Identity",
+            "argument": "-p",
+            "showArgument": true
+        }
+      }
+    ],
+    "outputs": []
+}

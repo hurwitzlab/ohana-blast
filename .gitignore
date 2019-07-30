@@ -1,0 +1,10 @@
+*.img
+slurm-*.out
+blast-annotated
+out
+err
+scripts.tgz
+*.swp
+.idea
+.cache
+__pycache__

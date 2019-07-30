@@ -1,0 +1,30 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%environment
+    PATH=/app/ohana-blast/scripts:$PATH
+
+%post
+
+    apt update
+    apt install -y apt-utils git wget zip zlib1g-dev libbz2-dev build-essential autoconf automake libtool
+    apt install -y python3 python3-pip
+    #apt install -y openjdk-9-jre-headless
+
+    python3 -m pip install --upgrade pip
+    python3 -m pip install biopython numpy
+
+    mkdir /app
+    cd /app
+    git clone https://github.com/hurwitzlab/ohana-blast.git
+    
+    # create mount points for TACC directories
+    mkdir /home1
+    mkdir /scratch
+    mkdir /work
+
+%test
+    echo "PATH=${PATH}"
+
+    python3 --version
+    ls -l /app/ohana-blast/scripts

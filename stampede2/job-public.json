@@ -1,0 +1,11 @@
+{
+  "name": "ohana-blast-public-test",
+  "appId": "ohana-blast-0.0.9u2",
+  "archive": true,
+  "maxRunTime": "00:20:00",
+  "inputs": {
+    "QUERY": "agave://data.iplantcollaborative.org/shared/imicrobe/test/apps/ohana-blast/test_HOT224_1_0025m.fa"
+  },
+  "parameter": {
+  }
+}
